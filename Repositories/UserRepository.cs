@@ -84,5 +84,34 @@ namespace WebAPI_2.DAL.Repositories
             
             return user?.SavedBooks?.ToList() ?? new List<Book>();
         }
+
+        public bool UpdateUser(User user)
+        {
+            var existingUser = _db.Users.FirstOrDefault(u => u.Id == user.Id);
+            
+            if (existingUser == null)
+                return false;
+
+            existingUser.Name = user.Name;
+            existingUser.NickName = user.NickName;
+            existingUser.Email = user.Email;
+            existingUser.Password = user.Password;
+            existingUser.IsAdmin = user.IsAdmin;
+
+            _db.SaveChanges();
+            return true;
+        }
+
+        public bool DeleteUser(Guid id)
+        {
+            var user = _db.Users.FirstOrDefault(u => u.Id == id);
+            
+            if (user == null)
+                return false;
+
+            _db.Users.Remove(user);
+            _db.SaveChanges();
+            return true;
+        }
     }
 }
