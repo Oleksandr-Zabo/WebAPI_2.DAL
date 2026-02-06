@@ -30,6 +30,16 @@ namespace WebAPI_2.DAL.Repositories
                 .FirstOrDefault(x => x.Id == id);
         }
 
+        public User GetByEmail(string email)
+        {
+            return _db.Users.FirstOrDefault(u => u.Email == email);
+        }
+
+        public bool EmailExists(string email)
+        {
+            return _db.Users.Any(u => u.Email == email);
+        }
+
         public List<User> GetAll() { 
             return _db.Users.ToList();
         }
@@ -95,8 +105,8 @@ namespace WebAPI_2.DAL.Repositories
             existingUser.Name = user.Name;
             existingUser.NickName = user.NickName;
             existingUser.Email = user.Email;
-            existingUser.Password = user.Password;
-            existingUser.IsAdmin = user.IsAdmin;
+            existingUser.PasswordHash = user.PasswordHash;
+            existingUser.Role = user.Role;
 
             _db.SaveChanges();
             return true;

@@ -5,8 +5,10 @@ namespace WebAPI_2.DAL.Abstracts
     public interface IUserRepository
     {
         User GetById(Guid id);
+        User GetByEmail(string email);
         List<User> GetAll();
         bool AddUser(User user);
+        bool EmailExists(string email);
         bool AddSavedBook(Guid bookId, Guid userId);
         bool RemoveSavedBook(Guid bookId, Guid userId);
         List<Book> GetSavedBooks(Guid userId);

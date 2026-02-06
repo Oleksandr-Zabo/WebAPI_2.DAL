@@ -22,6 +22,12 @@ namespace WebAPI_2.DAL
         {
             base.OnModelCreating(modelBuilder);
             
+            // Configure User entity
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.HasIndex(u => u.Email).IsUnique();
+            });
+            
             // Configure Book entity
             modelBuilder.Entity<Book>(entity =>
             {
