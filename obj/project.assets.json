@@ -3666,11 +3666,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Artem\\source\\repos\\WebAPI_2.DAL\\WebAPI_2.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Artem\\source\\repos\\WebAPI_2\\WebAPI_2.DAL\\WebAPI_2.DAL.csproj",
       "projectName": "WebAPI_2.DAL",
-      "projectPath": "C:\\Users\\Artem\\source\\repos\\WebAPI_2.DAL\\WebAPI_2.DAL.csproj",
+      "projectPath": "C:\\Users\\Artem\\source\\repos\\WebAPI_2\\WebAPI_2.DAL\\WebAPI_2.DAL.csproj",
       "packagesPath": "C:\\Users\\Artem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Artem\\source\\repos\\WebAPI_2.DAL\\obj\\",
+      "outputPath": "C:\\Users\\Artem\\source\\repos\\WebAPI_2\\WebAPI_2.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
